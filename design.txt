@@ -1,0 +1,26 @@
+CS2050Bank Project Design
+
+1. Abstract Class: Account
+   - Attributes:
+     - accountNumber: String
+     - accountHolderName: String
+     - balance: double
+     - interestRate: double
+   - Methods:
+     - deposit(double amount): Adds amount to balance
+     - withdraw(double amount): Deducts amount from balance (if available)
+     - checkBalance(): Returns current balance
+     - applyInterest(): Abstract method to apply interest (implemented in subclasses)
+
+2. Subclasses of Account:
+   a. Savings (inherits Account)
+      - Features:
+        - Interest is applied based on the interest rate.
+   b. Checking (inherits Account)
+      - Features:
+        - No interest is applied (interest rate = 0).
+
+3. Main Class: Main
+   - Functionality:
+     - Creates and manipulates instances of Savings and Checking.
+     - Demonstrates deposit, withdrawal, balance check, and applying interest.
